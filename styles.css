@@ -48,7 +48,7 @@ ul a:hover {
     padding: 50px 0;
     gap: 80px;
 
-    background-color: #C2B280;
+    background-color: #d0c299;
 }
 
 .adv-card {
@@ -82,31 +82,39 @@ ul a:hover {
 
 .gallery {
     display: flex;
+    flex-wrap: wrap; /* Разрешить перенос элементов на новую строку */
+    align-items: stretch; /* Растягивает элементы на высоту самого высокого */
+    background-color: #d9d9d9;
 }
 
 .item-card {
     display: flex;
-    align-items: center;
-    max-width: 500px;
-    margin: 20px;
-    border-radius: 10px; /* Закругленные углы */
-    overflow: hidden; /* Скрываем содержимое за границами */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавляем легкую тень */}
+    flex: 1 1 calc(33.33% - 40px); /* Учитываем отступы */
+    flex-direction: column; /* Элементы внутри идут сверху вниз */
+    align-items: stretch; /* Все элементы внутри растягиваются */
+    margin: 40px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.item-info {
+    flex: 1; /* Растягиваем информацию */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Для равномерного размещения содержимого */
+    background-color: #2B2D42;
+    color: #F4F4F4;
+    gap: 10px;
+}
 
 .item-card img {
     width: 250px;
 }
 
 
-.item-info {
-    display: flex;
-    flex-direction: column; /* Элементы идут по вертикали */
-    justify-content: space-between; /* Равномерное распределение */
-    background-color: #2B2D42; /* Фон блока с информацией */
-    color: #F4F4F4; /* Цвет текста */
-    height: 100%;
-    gap: 10px;
-}
+
 
 .item-info h2 {
     margin: 20px;
@@ -137,6 +145,36 @@ ul a:hover {
 
 .item-info button:hover {
     background-color: #3C4F34; /* Цвет кнопки при наведении */
+}
+
+
+
+
+
+
+
+
+
+.brand {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.brand img {
+    width: 200px;
+}
+
+
+
+.headers {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 
 
