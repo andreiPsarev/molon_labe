@@ -10,11 +10,16 @@
     align-items: center;
     justify-content: space-between;
     background-color: #2e2e2c;
-    height: 50px;
+    height: auto;
 }
 
 .logo {
     margin-left: 150px;
+}
+
+.logo img {
+    border-radius: 50%;
+    width: 100px;
 }
 
 .header ul {
@@ -66,11 +71,14 @@
     margin-bottom: 10px;
 }
 
+.gallery-info{
+    background-color: #d9d9d9;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    background-color: #d9d9d9;
 }
 
 .item-card {
@@ -147,7 +155,7 @@
 .headers {
     text-align: center;
     font-size: 48px;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
@@ -289,10 +297,18 @@
         margin: 0 auto;
     }
 
-    ul {
+    .logo img {
+        border-radius: 50%;
+        width: 70px;
+    }
+
+    .header ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
         flex-direction: column;
-        margin: 10px 0;
-        gap: 10px;
+        align-items: center; /* Центрируем элементы списка */
     }
 
     ul a {
@@ -320,16 +336,18 @@
         margin: 10px;
     }
 
+
     .gallery {
         flex-direction: column;
         padding: 10px;
-        gap: 20px;
+        gap: 15px;
     }
 
     .item-card {
         flex-direction: column;
         align-items: stretch;
         max-width: 100%;
+        margin: 0px 20px;
     }
 
     .item-card img {
@@ -350,6 +368,23 @@
     .item-info button {
         width: 80%;
         margin: 10px auto;
+    }
+
+    .brand {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Две колонки одинаковой ширины */
+        gap: 20px; /* Расстояние между элементами */
+        justify-items: center; /* Центрирование логотипов по горизонтали */
+        align-items: center; /* Центрирование логотипов по вертикали */
+    }
+    
+    .brand img {
+        max-width: 100%; /* Логотипы будут адаптироваться */
+        height: auto; /* Сохраняем пропорции логотипов */
+    }
+
+    .headers {
+        font-size: 36px;
     }
 
         /* Секция о компании */
